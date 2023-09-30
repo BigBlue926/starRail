@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/starrail
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: 192.168.23.128
+      port: 6379
+      password: 172143
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 100ms
+server:
+  port: 8100
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+        same-site: none
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl
+  global-config:
+    db-config:
+      id-type: assign_id
+
+reggie:
+  path: E:\IDE_Project\starRail\png\
